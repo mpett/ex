@@ -1,0 +1,31 @@
+[07/01/15 19:24:12] Jun Sugiura: https://docs.google.com/spreadsheets/d/1NMKiZ363-ymYqGn9BlPJWgGpSi39VlB31KG71hstHZw/edit#gid=767761360
+[07/01/15 19:40:25] Jun Sugiura: python src/generateTrainingSet.py --input data/dp-test.tuples --quicktest --extkb /work/jun-s/kb --problemno 13 --cat --pathsim1 --pathgroup --insent2 --simwn > tmp.xml
+python src/extractXML.py tmp.xml > tmp4viewer.xml
+ln -si tmp4viewer.xml ~/work/wsc/local/webint/link-to-result
+
+wsc/local/webint % python ./server.py 8020
+[07/01/15 19:50:17] Jun Sugiura: http://brandy:8090/cgi-bin/comeon-new.py?query=16&k=200
+[07/01/15 19:59:30] Jun Sugiura: kill `ps aux | fgrep martin | fgrep python | awk '{print $2}'`
+[07/01/15 21:14:09] Jun Sugiura: -- copy the results for all problems in test set.
+scp /home/jun-s/work/wsc/tmp.0106full.xml .
+
+-- make symbolic link to the xml file
+ln -si  ~/nlp/wsc/tmp.0106full.xml ~/nlp/wsc/local/webint/link-to-result
+[07/01/15 21:16:35] Jun Sugiura: -- then, you can use (if you set port number to "8091")
+https://docs.google.com/spreadsheets/d/1i1nBydBFfXoY13ba3nXovlRUiWMTl3R12RrpBuLLyLY/edit?usp=sharing
+
+---------------------
+
+Generic sentence (GS):
+DO NOT express specific episode(sent1) or isolated facts(sent2).
+sent1: “Merry is smoking a cigar.”
+sent2: “The bomb caused chaos.”
+DO report a kind of general property(sent3) or habit(sent4).
+sent3: “potatoes contain protein.”
+sent4: “Merry smokes cigar after dinner.”
+Criteria of annotation:
+1)according to the definition and your understanding of the sentence.
+2)if the sentence included frequency adverb like “usually”, “typically”, or temporal modifier like “every night”, or modal verbs like “could”, “would”, “can”, the sentence would be annotated as generic sentence(g).
+3)you could test the sentence by adding “usually” before the predicate, and if its meaning doesn’t change a lot, it could be generic sentence.
+
+
