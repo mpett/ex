@@ -1,0 +1,105 @@
+% ------------- THE USUAL CRAP
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{mathtools}
+
+%----------------------------------------------------------------------------------------
+
+\usepackage{listings} % Required for inserting code snippets
+\usepackage[usenames,dvipsnames]{color} % Required for specifying custom colors and referring to colors by name
+
+\definecolor{DarkGreen}{rgb}{0.0,0.4,0.0} % Comment color
+\definecolor{highlight}{RGB}{255,251,204} % Code highlight color
+
+\lstdefinestyle{Style1}{ % Define a style for your code snippet, multiple definitions can be made if, for example, you wish to insert multiple code snippets using different programming languages into one document
+language=Perl, % Detects keywords, comments, strings, functions, etc for the language specified
+backgroundcolor=\color{highlight}, % Set the background color for the snippet - useful for highlighting
+basicstyle=\footnotesize\ttfamily, % The default font size and style of the code
+breakatwhitespace=false, % If true, only allows line breaks at white space
+breaklines=true, % Automatic line breaking (prevents code from protruding outside the box)
+captionpos=b, % Sets the caption position: b for bottom; t for top
+commentstyle=\usefont{T1}{pcr}{m}{sl}\color{DarkGreen}, % Style of comments within the code - dark green courier font
+deletekeywords={}, % If you want to delete any keywords from the current language separate them by commas
+%escapeinside={\%}, % This allows you to escape to LaTeX using the character in the bracket
+firstnumber=1, % Line numbers begin at line 1
+frame=single, % Frame around the code box, value can be: none, leftline, topline, bottomline, lines, single, shadowbox
+frameround=tttt, % Rounds the corners of the frame for the top left, top right, bottom left and bottom right positions
+keywordstyle=\color{Blue}\bf, % Functions are bold and blue
+morekeywords={}, % Add any functions no included by default here separated by commas
+numbers=left, % Location of line numbers, can take the values of: none, left, right
+numbersep=10pt, % Distance of line numbers from the code box
+numberstyle=\tiny\color{Gray}, % Style used for line numbers
+rulecolor=\color{black}, % Frame border color
+showstringspaces=false, % Don't put marks in string spaces
+showtabs=false, % Display tabs in the code as lines
+stepnumber=5, % The step distance between line numbers, i.e. how often will lines be numbered
+stringstyle=\color{Purple}, % Strings are purple
+tabsize=2, % Number of spaces per tab in the code
+}
+
+% Create a command to cleanly insert a snippet with the style above anywhere in the document
+\newcommand{\insertcode}[2]{\begin{itemize}\item[]\lstinputlisting[caption=#2,label=#1,style=Style1]{#1}\end{itemize}} % The first argument is the script location/filename and the second is a caption for the listing
+
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+
+
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+% ------------- TITLE
+\title{WSC Error Analysis}
+\author{Martin Pettersson (martinp4@kth.se)}
+\maketitle
+
+% ------------- SHIT STARTS HERE
+\begin{description}
+  \item[Sentence 196] \hfill \\
+  {\bf John+} tricked {\bf Bill-} because he was mischievous.
+  \begin{itemize}
+  	\item When you're mischievous against something or someone it is almost always implied that the object is being mistreated or hurt by the subject. The predicate "tricked" will in this case most certainly imply that John is behaving badly towards Bill. Therefore I think this sentence would be easily resolvable by using script knowledge.
+  	\item The system has chosen the link $X mischievous ~ X trick$, whick looks like a correct resolution.
+  	\item \insertcode{"Scripts/example.pl"}{Nena would be proud.} % The first argument is the script location/filename and the second is a caption for the listing
+  \end{itemize}
+  \item[Sentence 201] \hfill \\
+  The second item
+% ------------- SHIT ENDS HERE
+\end{description}
+
+% ------------- DOCUMENT END
+\end{document}
+
+\begin{comment}
+	196
+	201
+	350
+	443
+	70
+	116
+	407
+	88
+	47
+	307
+	256
+	494
+	241
+	8
+	406
+	484
+	339
+	415
+	525
+	537
+	528
+	441
+	121
+	483
+	3
+	331
+	467
+	410
+	111
+\end{comment}

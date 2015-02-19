@@ -29,3 +29,6 @@ Criteria of annotation:
 3)you could test the sentence by adding “usually” before the predicate, and if its meaning doesn’t change a lot, it could be generic sentence.
 
 
+--------------------
+
+scp command for kth latex compiler: scp -r * martinp4@u-shell.csc.kth.se:~/ex/
