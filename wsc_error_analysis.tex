@@ -72,12 +72,11 @@ tabsize=2, % Number of spaces per tab in the code
   {\bf Rick Davis-} campaigned for {\bf John McCain+} since he was the best man for office.
   \begin{itemize}
   	\item This sentence is only possible to resolve easily if we look among corpora related to politics.
-  	\item With a good corpus this would be very easy to resolve if the object candidate was of the form {\bf man for office} instead of just {\bf man}. The latter case will be way too general and has nothing to do with this special kind of political situation which the sentence describes.
-  	\item {\bf Possible solution}: the system should be able to make the comparison $X$ man for office \sim campaign for $X$ vs. $X$ campaign for \sim $X$ man for office instead of $X$ man \sim campaign for $X$ vs. $X$ campaign for \sim $X$ man. 
+  	\item With a good corpus this would be very easy to resolve if the object candidate was of the form {\bf man for office} instead of just {\bf man}. The latter case will be way too general and has nothing to do with this special kind of political situation our sentence describes.
+  	\item The system should be able to make the comparison {\bf X man for office $\sim$ campaign for X} vs. {\bf X campaign for $\sim$ X man for office} instead of {\bf X man $\sim$ campaign for X} vs. {\bf X campaign for $\sim$ X man}. 
   \end{itemize}
 
   % ------------- EXAMPLE EXAMPLE EXAMPLE
-  \begin{comment}
 
   \item[Example 200] \hfill \\
   {\bf John+} tricked {\bf Bill-} because he was mischievous.
@@ -87,7 +86,7 @@ tabsize=2, % Number of spaces per tab in the code
   	\item Possible solution: roflmao idk
   \end{itemize}
 
-  \end{comment}
+  
 
 % ------------- SHIT ENDS HERE
 \end{description}
