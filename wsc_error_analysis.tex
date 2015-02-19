@@ -50,20 +50,35 @@ tabsize=2, % Number of spaces per tab in the code
 \maketitle
 
 % ------------- SHIT STARTS HERE
+
+
 \begin{description}
+
+
+  % ------------- SENTENCE 196
   \item[Sentence 196] \hfill \\
   {\bf John+} tricked {\bf Bill-} because he was mischievous.
   \begin{itemize}
-  	\item When you're mischievous against something or someone it is almost always implied that the object is being mistreated or hurt by the subject. The predicate "tricked" will in this case most certainly imply that John is behaving badly towards Bill. Therefore I think this sentence would be easily resolvable by using script knowledge.
-  	\item The system has chosen the link $X$ mischievous $ \sim X $ trick, whick looks like a correct resolution.
+  	\item When you're mischievous against something or someone it is almost always implied that the object is being mistreated or hurt by the subject. The predicate "tricked" will in this case most certainly imply to a human reader that John is behaving badly towards Bill. The sentence should therefore be possible to resolve by using script knowledge.
   	\item There are two candidates for the incorrect answer and none for correct one. However, the two incorrect candidates are duplicate.
   	\item \insertcode{"Scripts/196/196-1.sentence"}{Context for $R_1$ and $R_2$ (duplicates).}
-  	\item This is an article about Greek mythology which is probably unimportant for our sentence. The correct subject in this sentence is They, which unfortunately points to something that is clarified in the context, not within the sentence (beautiful maiden nymphs). The correct object is humans. 
+  	\item This is an article about Greek mythology which is probably unimportant for our sentence. The correct subject in this sentence is $They$, which points to something that is clarified in the context and not within the sentence (beautiful maiden nymphs). The correct object is $humans$. 
   	\item \insertcode{"Scripts/196/196-2.sentence"}{Target sentence in $R_1$ and $R_2$.}
-  	\item Possible solution: lol idk
+  	\item The test sentence is of the form $X$ trick $X$, $X$ mischievous. The corpus sentence is of the form $X$ mischievous $X$, $X$ trick.
+  	\item A predicate in English can be of the form {\bf $adverb$ towards} or {\bf $adverb$ against}. Is this considered? 
   \end{itemize}
-  \item[Sentence 201] \hfill \\
-  The second item
+
+
+  % ------------- EXAMPLE EXAMPLE EXAMPLE
+  \item[Example 200] \hfill \\
+  {\bf John+} tricked {\bf Bill-} because he was mischievous.
+  \begin{itemize}
+  	\item lol
+  	\item \insertcode{"Scripts/example.pl"}{Example}
+  	\item Possible solution: roflmao idk
+  \end{itemize}
+
+
 % ------------- SHIT ENDS HERE
 \end{description}
 
