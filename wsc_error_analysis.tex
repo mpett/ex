@@ -12,7 +12,7 @@
 \definecolor{highlight}{RGB}{255,251,204} % Code highlight color
 
 \lstdefinestyle{Style1}{ % Define a style for your code snippet, multiple definitions can be made if, for example, you wish to insert multiple code snippets using different programming languages into one document
-language=Perl, % Detects keywords, comments, strings, functions, etc for the language specified
+language=HTML, % Detects keywords, comments, strings, functions, etc for the language specified
 backgroundcolor=\color{highlight}, % Set the background color for the snippet - useful for highlighting
 basicstyle=\footnotesize\ttfamily, % The default font size and style of the code
 breakatwhitespace=false, % If true, only allows line breaks at white space
@@ -42,12 +42,6 @@ tabsize=2, % Number of spaces per tab in the code
 
 %----------------------------------------------------------------------------------------
 
-%----------------------------------------------------------------------------------------
-
-
-
-%----------------------------------------------------------------------------------------
-
 \begin{document}
 
 % ------------- TITLE
@@ -61,8 +55,12 @@ tabsize=2, % Number of spaces per tab in the code
   {\bf John+} tricked {\bf Bill-} because he was mischievous.
   \begin{itemize}
   	\item When you're mischievous against something or someone it is almost always implied that the object is being mistreated or hurt by the subject. The predicate "tricked" will in this case most certainly imply that John is behaving badly towards Bill. Therefore I think this sentence would be easily resolvable by using script knowledge.
-  	\item The system has chosen the link $X mischievous ~ X trick$, whick looks like a correct resolution.
-  	\item \insertcode{"Scripts/example.pl"}{Nena would be proud.} % The first argument is the script location/filename and the second is a caption for the listing
+  	\item The system has chosen the link $X$ mischievous $ \sim X $ trick, whick looks like a correct resolution.
+  	\item There are two candidates for the incorrect answer and none for correct one. However, the two incorrect candidates are duplicate.
+  	\item \insertcode{"Scripts/196/196-1.sentence"}{Context for $R_1$ and $R_2$ (duplicates).}
+  	\item This is an article about Greek mythology which is probably unimportant for our sentence. The correct subject in this sentence is They, which unfortunately points to something that is clarified in the context, not within the sentence (beautiful maiden nymphs). The correct object is humans. 
+  	\item \insertcode{"Scripts/196/196-2.sentence"}{Target sentence in $R_1$ and $R_2$.}
+  	\item Possible solution: lol idk
   \end{itemize}
   \item[Sentence 201] \hfill \\
   The second item
