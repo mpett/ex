@@ -64,12 +64,21 @@ tabsize=2, % Number of spaces per tab in the code
   	\item \insertcode{"Scripts/196/196-1.sentence"}{Context for $R_1$ and $R_2$ (duplicates).}
   	\item This is an article about Greek mythology which is probably unimportant for our sentence. The correct subject in this sentence is $They$, which points to something that is clarified in the context and not within the sentence (beautiful maiden nymphs). The correct object is $humans$. 
   	\item \insertcode{"Scripts/196/196-2.sentence"}{Target sentence in $R_1$ and $R_2$.}
-  	\item The test sentence is of the form $X$ trick $X$, $X$ mischievous. The corpus sentence is of the form $X$ mischievous $X$, $X$ trick.
+  	\item The test sentence is of the form $X$ trick, $X$ mischievous. The corpus sentence is of the form $X$ mischievous towards, $X$ trick.
   	\item A predicate in English can be of the form {\bf $adverb$ towards} or {\bf $adverb$ against}. Is this considered? 
   \end{itemize}
 
+  \item[Sentence 201] \hfill \\
+  {\bf Rick Davis-} campaigned for {\bf John McCain+} since he was the best man for office.
+  \begin{itemize}
+  	\item This sentence is only possible to resolve easily if we look among corpora related to politics.
+  	\item With a good corpus this would be very easy to resolve if the object candidate was of the form {\bf man for office} instead of just {\bf man}. The latter case will be way too general and has nothing to do with this special kind of political situation which the sentence describes.
+  	\item {\bf Possible solution}: the system should be able to make the comparison $X$ man for office \sim campaign for $X$ vs. $X$ campaign for \sim $X$ man for office instead of $X$ man \sim campaign for $X$ vs. $X$ campaign for \sim $X$ man. 
+  \end{itemize}
 
   % ------------- EXAMPLE EXAMPLE EXAMPLE
+  \begin{comment}
+
   \item[Example 200] \hfill \\
   {\bf John+} tricked {\bf Bill-} because he was mischievous.
   \begin{itemize}
@@ -78,6 +87,7 @@ tabsize=2, % Number of spaces per tab in the code
   	\item Possible solution: roflmao idk
   \end{itemize}
 
+  \end{comment}
 
 % ------------- SHIT ENDS HERE
 \end{description}
@@ -86,7 +96,6 @@ tabsize=2, % Number of spaces per tab in the code
 \end{document}
 
 \begin{comment}
-	196
 	201
 	350
 	443
