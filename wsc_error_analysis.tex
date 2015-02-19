@@ -76,6 +76,18 @@ tabsize=2, % Number of spaces per tab in the code
   	\item The system should be able to make the comparison {\bf X man for office $\sim$ campaign for X} vs. {\bf X campaign for $\sim$ X man for office} instead of {\bf X man $\sim$ campaign for X} vs. {\bf X campaign for $\sim$ X man}. 
   \end{itemize}
 
+  \item[Sentence 350] \hfill \\
+  {\bf Claudia-} lost all her money to {\bf Valarie+} because she is really smart.
+  \begin{itemize}
+  	\item This sentence obviously has a lot of issues, since we have only 6 votes for the correct candidate, {\bf X smart $\sim$ lose to X}, but 142 votes for the incorrect one, {\bf X lose $\sim$ X smart}. However the logic behind the candidate comparison looks completely correct, and this should be easy to resolve.
+  	\item It would be very interesting to make comparisons between negating opposites, for example: {\bf X lose $\sim$ X smart} vs. {\bf X lose $\sim$ X stupid}. This is also not too difficult to implement.
+  	\item \insertcode{"Scripts/350/350-1.sentence"}{Context from $R_1$ and $R_2$.}
+  	\item \insertcode{"Scripts/350/350-2.sentence"}{Target sentence for $R_1$ and $R_2$.}
+  	\item Looking at this example, one issue could be that the object {\bf it} in the target sentence is an exophor and not an anaphor. It is not clear from either the sentence itself or the context of what we are smart about. 
+  	\item Similar problem as with sentence 196, {\bf X smart} is not true here, instead we have the case of {\bf smart about X} or {\bf X smart about}
+  	\item This sentence is a {\it concessive clause} determined by {\bf Even though}. {\it Even though they were smart about it, they lost some serious money} is equivalent to {\it They lost some serious money even though they were smart about it}.
+  \end{itemize}
+
   % ------------- EXAMPLE EXAMPLE EXAMPLE
 
   \item[Example 200] \hfill \\
@@ -95,7 +107,6 @@ tabsize=2, % Number of spaces per tab in the code
 \end{document}
 
 \begin{comment}
-	201
 	350
 	443
 	70
