@@ -46,7 +46,7 @@ tabsize=2, % Number of spaces per tab in the code
 
 % ------------- TITLE
 \title{WSC Error Analysis}
-\author{Martin Pettersson (martinp4@kth.se)}
+\author{Martin Pettersson\\martinp4@kth.se}
 \maketitle
 
 % ------------- SHIT STARTS HERE
@@ -59,13 +59,13 @@ tabsize=2, % Number of spaces per tab in the code
   \item[Sentence 196] \hfill \\
   {\bf John+} tricked {\bf Bill-} because he was mischievous.
   \begin{itemize}
-  	\item When you're mischievous against something or someone it is almost always implied that the object is being mistreated or hurt by the subject. The predicate "tricked" will in this case most certainly imply to a human reader that John is behaving badly towards Bill. The sentence should therefore be possible to resolve by using script knowledge.
+  	\item When you're mischievous against something or someone it is almost always implied that the object is being mistreated or hurt by the subject. The predicate "tricked" will in this case most certainly imply to a human reader that John is behaving badly towards Bill.
   	\item There are two candidates for the incorrect answer and none for correct one. However, the two incorrect candidates are duplicate.
   	\item \insertcode{"Scripts/196/196-1.sentence"}{Context for $R_1$ and $R_2$ (duplicates).}
   	\item This is an article about Greek mythology which is probably unimportant for our sentence. The correct subject in this sentence is $They$, which points to something that is clarified in the context and not within the sentence (beautiful maiden nymphs). The correct object is $humans$. 
   	\item \insertcode{"Scripts/196/196-2.sentence"}{Target sentence in $R_1$ and $R_2$.}
   	\item The test sentence is of the form $X$ trick, $X$ mischievous. The corpus sentence is of the form $X$ mischievous towards, $X$ trick.
-  	\item A predicate in English can be of the form {\bf $adverb$ towards} or {\bf $adverb$ against}. Is this considered?
+  	\item A predicate in English can be of the form {\bf $adjective$ towards} or {\bf $adjective$ against}. Is this considered?
   \end{itemize}
 
   \item[Sentence 201] \hfill \\
@@ -80,7 +80,7 @@ tabsize=2, % Number of spaces per tab in the code
   {\bf Claudia-} lost all her money to {\bf Valarie+} because she is really smart.
   \begin{itemize}
   	\item This sentence obviously has a lot of issues, since we have only 6 votes for the correct candidate, {\bf X smart $\sim$ lose to X}, but 142 votes for the incorrect one, {\bf X lose $\sim$ X smart}. However the logic behind the candidate comparison looks completely correct, and this should be easy to resolve.
-  	\item It would be very interesting to make comparisons between negating opposites, for example: {\bf X lose $\sim$ X smart} vs. {\bf X lose $\sim$ X stupid}. This is also not too difficult to implement.
+  	\item It would be very interesting to make comparisons between negating opposites, for example: {\bf X lose $\sim$ X smart} vs. {\bf X lose $\sim$ X stupid}.
   	\item \insertcode{"Scripts/350/350-1.sentence"}{Context from $R_1$ and $R_2$.}
   	\item \insertcode{"Scripts/350/350-2.sentence"}{Target sentence for $R_1$ and $R_2$.}
   	\item Looking at this example, one issue could be that the object {\bf it} in the target sentence is an exophor and not an anaphor. It is not clear from either the sentence itself or the context of what we are smart about. 
@@ -99,7 +99,7 @@ tabsize=2, % Number of spaces per tab in the code
   {\bf Jimbo} was running from {\bf Bobbert+} because he smelled awful.
   \begin{itemize}
   	\item The problem here is that we are comparing {\bf X smell $\sim$ run from X} vs. {\bf X run $\sim$ smell X}. The verb {\it smell} can have several meanings depending on context. It can be sort-of reflexive and not at the same time, i.e. "He smells" can be equivalent to "He stinks" and "He is sensing a smell" at the same time; it depends on the context. 
-  	\item {\bf X smell awful $\sim$ run from X} vs. {\bf X run $\sim$ smell awful X} would probably solve this problem.
+  	\item {\bf X smell awful $\sim$ run from X} vs. {\bf X run $\sim$ X smell awful } would probably solve this problem.
   \end{itemize}
 
   \item[Sentence 407] \hfill \\
@@ -109,20 +109,6 @@ tabsize=2, % Number of spaces per tab in the code
   	\item Current comparison is {\bf X one $\sim$ X rescue} vs. {\bf X one $\sim$ rescue X}. This is too vague.
   	\item Results would probably be better if the system compared {\bf X one who can $\sim$ X rescue} vs. {\bf X one who can $\sim$ rescue X}.
   \end{itemize}
-
-  % ------------- EXAMPLE EXAMPLE EXAMPLE
-\begin{comment}
-  \item[Example] \hfill \\
-  {\bf John+} tricked {\bf Bill-} because he was mischievous.
-  \begin{itemize}
-  	\item lol
-  	\item \insertcode{"Scripts/example.pl"}{Example}
-  	\item Possible solution: roflmao idk
-  \end{itemize}
-\end{comment}
-  
-
-  
 
 % ------------- SHIT ENDS HERE
 \end{description}
