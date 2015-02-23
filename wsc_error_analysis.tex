@@ -110,6 +110,19 @@ tabsize=2, % Number of spaces per tab in the code
   	\item Results would probably be better if the system compared {\bf X one who can $\sim$ X rescue} vs. {\bf X one who can $\sim$ rescue X}.
   \end{itemize}
 
+  \item[Sentence 116] \hfill \\
+  {\bf Bob-} sued {\bf Bill+} because he was embezzling funds. 
+  \begin{itemize}
+  	\item {\bf X embezzle $\sim$ sue X} vs. {\bf X embezzle $\sim$ X sue} looks completely correct. Nearest neighbor gives us 4 votes for the correct candidate and 10 votes for the incorrect one.
+  	\item The incorrect candidate has ten votes, however most of them are duplicate. In reality there are only two incorrect matches. This is reoccurring in almost all sentences. Is it a front-end issue or something else?
+  	\item \insertcode{"Scripts/116/116-1.sentence"}{Context of first incorrect vote.}
+  	\item Noisy, but in this case it shouldn't be an issue, the target sentence contains all information we need.
+  	\item \insertcode{"Scripts/116/116-2.sentence"}{Target sentence of first incorrect vote.}
+  	\item This is interesting. The sentence follows the logical structure we are looking for, although everything crashes because of {\it suggesting}. The mayor is suing because the newspaper made an accusation of him embezzling, not because he was actually embezzling.
+  	\item \insertcode{"Scripts/116/116-3.sentence"}{Context for remaining votes.}
+  	\item  This text makes very little sense.
+  \end{itemize}
+
 % ------------- SHIT ENDS HERE
 \end{description}
 
