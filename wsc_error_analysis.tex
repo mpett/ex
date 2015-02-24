@@ -1,5 +1,5 @@
 % ------------- THE USUAL CRAP
-\documentclass{article}
+\documentclass{scrartcl}
 \usepackage{graphicx}
 \usepackage{mathtools}
 
@@ -51,6 +51,11 @@ tabsize=2, % Number of spaces per tab in the code
 
 % ------------- SHIT STARTS HERE
 
+% ------------- OLD DATASET
+\begin{center}
+	\title{{\large Old Dataset}}
+\end{center}
+% ------------- OLD DATASET
 
 \begin{description}
   % ------------- SENTENCE 196
@@ -139,15 +144,47 @@ tabsize=2, % Number of spaces per tab in the code
   \item[Sentence 47] \hfill \\
   {\bf Watson-} beat {\bf Ken+} at Jeopardy because he is an inferior human.
   \begin{itemize}
-  	\item This sentence is probably not possible to resolve using this method. Here we can only know from world knowledge that Watson most likely is the IBM Watson AI and that Ken is a human being. The sentence itself tells us nothing about this.
+  	\item This sentence is probably not possible to resolve using this method. Here we can only know from world knowledge that Watson most likely refers to the IBM Watson AI and that Ken is a human being. We cannot know this looking at the sentence alone.
   \end{itemize}
 
-  % ------------- SENTENCE 47
-  \item[Sentence 47] \hfill \\
-  {\bf Watson-} beat {\bf Ken+} at Jeopardy because he is an inferior human.
+  % ------------- SENTENCE 307
+  \item[Sentence 307] \hfill \\
+  {\bf Liverpool-} lost to {\bf Manchester United+} because they were a superior team.
   \begin{itemize}
-  	\item This sentence is probably not possible to resolve using this method. Here we can only know from world knowledge that Watson most likely is the IBM Watson AI and that Ken is a human being. The sentence itself tells us nothing about this.
+  	\item {\bf X team $\sim$ lose to X} vs. {\bf X lose $\sim$ X team} will compare nothing relevant for this sentence. We are interested in which team is the better one, thus we need more information.
+  	\item {\bf X superior team $\sim$ lose to X} vs. {\bf X lose $\sim$ X superior team} may work better.
   \end{itemize}
+
+  % ------------- SENTENCE 256
+  \item[Sentence 256] \hfill \\
+  {\bf Lily-} gave {\bf Amber+} a hug because she was sad.
+  \begin{itemize}
+  	\item {\bf X sad $\sim$ give X} vs. {\bf X give $\sim$ X sad} is not enough for comparing. In this sentence we are interested in giving hugs, only {\it giving} will be too general.
+  	\item Has to look something like this in order to work: {\bf X sad $\sim$ give a hug X} vs. {\bf X give a hug $\sim$ X sad}
+  \end{itemize}
+
+  % ------------- SENTENCE 494
+  \item[Sentence 494] \hfill \\
+  {\bf DVD Players-} are slowly being replaced by {\bf Blu Ray Systems+} since they are becoming the new medium of entertainment.
+  \begin{itemize}
+  	\item Already a pretty complex sentence. {\it become the new medium of entertainment} is highly important in order to resolve the pronoun but probably too stylistic to appear in a corpus in this way.
+  	\item At this moment we are comparing {\bf X become $\sim$ replace} vs. {\bf X become $\sim$ replace} which looks completely broken (looks identical?). Should at least be something like {\bf X become $\sim$ replace by X} vs. {\bf X become $\sim$ X replace}.
+  \end{itemize}
+
+  \item[Sentence 241] \hfill \\
+  {\bf The hyena-s} scavenged from the {\bf lion+}s because they had left scraps.
+  \begin{itemize}
+  	\item {\bf X leave $\sim$ scavenge pass} vs. {\bf X leave $\sim$ scavenge} looks strange. Why is {\it pass} included for the correct candidate?
+  	\item Most likely we will not get relevant results if we omit {\it scraps} from this sentence.
+  \end{itemize}
+
+% ------------- NEW DATASET
+\newpage
+\begin{center}
+	\title{{\large New Dataset}}
+\end{center}
+% ------------- NEW DATASET
+
 
 % ------------- SHIT ENDS HERE
 \end{description}
@@ -156,11 +193,6 @@ tabsize=2, % Number of spaces per tab in the code
 \end{document}
 
 \begin{comment}
-	47
-	307
-	256
-	494
-	241
 	8
 	406
 	484
