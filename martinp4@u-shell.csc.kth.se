@@ -10,24 +10,25 @@
 
 % ------------- TITLE
 \section{Preliminary Thesis Title}
-"Resolving Difficult Pronouns Using Script Knowledge"\\
+"Resolving Difficult Pronouns Using Script Knowledge"
 "Attempting The Winograd Schema Challenge Using Script Knowledge"
 
 % ------------- BACKGROUND
-\section{Background and Motivation}
-A proposed alternative to the famous Turing Test are resolution of so-called Winograd Schemas. The reason behind this is to try and invent a more reliable way to test human thinking behaviour in machines without using deception techniques, naive scripts or by cheating. The basic idea is to present a machine with questions that are easy to answer for English-speaking adults, but still so ambigous that a large corpus probably would not help much. 
+\section{Background}
+A proposed alternative to the famous Turing Test are resolution of so-called Winograd Schemas. The reason behind this is to try and invent a more reliable way to test human thinking behaviour in machines without using deception techniques, naive scripts or by cheating. The general idea is to present a machine resolution questions which are very easy to answer for an English-speaking adult. An example of a Winograd Schema is presented as follows:
 
-An example of a Winograd Schema is presented as follows:
-\\ \\
 {\it The trophy would not fit in the brown suitcase because it was too big (small). What was too big (small)?}
 \begin{itemize}
   \item The trophy
   \item The suitcase
 \end{itemize}
 
-Being part of a bilateral exchange program in Japan, I am currently sitting in a research lab at Tohoku University in Sendai that is specialized towards NLP. Researchers here have developed a system able to conduct large-scale acquisition of narrative event pairs from a huge corpus. At this moment they are using a kNN-based framework in order to discover potential impacts using script knowledge in coreference resolution. In the beginning of October this year they will participate in The Winograd Schema Challenge, an AI competition hosted by the non-profit organization Commonsense Reasoning.
+Being part of a bilateral exchange program in Japan, I am currently sitting in a research lab at Tohoku University in Sendai who are specialized towards NLP. Researchers at this lab have developed a system able to conduct large-scale acquisition of narrative event pairs from a huge corpus. At this moment they are using a kNN-based framework in order to discover potential impacts using script knowledge in coreference resolution. In the beginning of October this year, they will participate in {\it The Winograd Schema Challenge}, an AI competition hosted by the non-profit organization {\it Commonsense Reasoning}.
 
-With this thesis I aim to further explore these ideas by analyzing, evaluating and improving some parts of their current system.
+With this thesis I aim to further explore these ideas by evaluating and improving certain parts of their current system.
+
+\subsection{Motivation} 
+
 \subsection{Location}
 The project will be carried out at Inui-Okazaki Lab of Communication Science, Tohoku University Graduate School of Information Sciences, Sendai-shi, Miyagi, Japan.
 
