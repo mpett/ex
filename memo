@@ -38,7 +38,7 @@ march wed 11: I started watching the stanford course by jurafsky instead of the 
 
 So I guess the idea is to work with this for around two weeks and try to create some sort of list with suggestions. At this moment they're kind of vague, but it's better than nothing at all.
 
-* edit distance, filtering on candidates, spell checking on scripts, implement probablistic models, make use of stuff such as google n-gram, try different corpora (newspaper vs fiction?) and compare the results. 
+* edit distance, filtering on candidates, spell checking on scripts, implement probablistic models, make use of stuff such as google n-gram, try different corpora (newspaper vs fiction?) and compare the results. (see notebook)
 
 Oh yeah, and I reaaallly need to write that project specification.
 -------------------
