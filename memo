@@ -41,4 +41,6 @@ So I guess the idea is to work with this for around two weeks and try to create 
 * edit distance, filtering on candidates, spell checking on scripts, implement probablistic models, make use of stuff such as google n-gram, try different corpora (newspaper vs fiction?) and compare the results. (see notebook)
 
 Oh yeah, and I reaaallly need to write that project specification.
--------------------
+------------------
+march sat 14:
+good turing smoothing: given some words, count the number of words and then predict how likely it is that a word will occur in a sentence.
