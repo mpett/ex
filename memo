@@ -44,3 +44,7 @@ Oh yeah, and I reaaallly need to write that project specification.
 ------------------
 march sat 14:
 good turing smoothing: given some words, count the number of words and then predict how likely it is that a word will occur in a sentence. smoothing is basically about solving the problem of zero-probabilities by taking probability mass from a common word to a word that never occurs. (isn't it possible to solve the zero anaphora problem with this line of thought?)
+
+------------------
+march, mon 16
+I just watched videos of chatbots (like cleverbot and siri) talking to eachother. This actually gave me some very interesting insights. It feels like we are creating AI and making language processing in order to make it easier for humans to communicate with eachother and for human-machine communication. However, machine to machine-communication seems so profound and interesting, shouldn't we spend more time with this?
