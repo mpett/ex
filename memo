@@ -54,4 +54,22 @@ march, tue 17
 Remember to look up stuff regarding sentiment polarity, freebase, wikipedia stuffz. I have learned about sentiment analysis, text classification and some algorithms related to that (naive bayes, bag of words). We could perhaps use classification algorithms on the input questions and map them to classified parts of the corpus (perhaps we're already doing this?).
 
 Regarding sentiment analysis:
-It is important to consider negation.
+It is important to consider negation. There is a resource called "SentiWordNet", can we use it? There are a lot of "polarity lexicons" such as mpqa, opinion lexicon, general inquirer, sentiwordned and liwc.
+
+You can use some classifier graph similarity thing for sentiment polarity (hatzivassiloglou, mckeown, 1997). This has something to do with PMI. 
+
+Polarity(phrase) = PMI(phrase, "excellent") - PMI(phrase, "poor")
+
+Another paper on finding sentiment for aspects (2008 paper, Blair-Goldensohn et al)
+
+to sum it up:
+* negation is important
+* naive bayes, for some tasks it will work to use all tasks
+* use hand-built polarity lexicons (for sentiment polarity)
+* use seeds and semi-supervised learning to generate lexicons
+
+Affective states are similar to sentiment, but not really the same thing. I feel that sentiment analysis is more about telling the robot to make a distinction if a text is describing something good or something bad. The study of affective states is much broader. Here we are interested in: emotion, mood, interpersonal states, attitudes and/or personality traits.
+
+There are a lot of creative ways to attack these problems (see 7-5, stanford course). Stanford currently does research on friendliness. Like in what way do we express friendliness and in what situations does it occur? Am I more likely to be friendly towards different persons in different environments or is it something else that decides this?
+
+
