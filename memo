@@ -81,3 +81,7 @@ march 24
 Been watching videos and doing some reading on deep learning, some sort of buzzword. There's a model made by stanford that uses deep learning that solves sentiment polarity with good results. Perhaps this is something to look at? Deep learning is based on using old learning algorithms combined with the use of big data. The method is simple but produces complex results (similar to mandelbrot fractals ~ish).
 
 Sentiment Analysis Treebank Stanford stuff: http://nlp.stanford.edu/~socherr/EMNLP2013_RNTN.pdf , http://nlp.stanford.edu/sentiment/
+
+march 24, cont'd
+-----------------
+Watched a video with a researcher from BaiDu talking about hpc in machine learning and the use of GPU:s in solving ML problems. Continued reading the paper on semantic treebank whatever things. Read about semantic vector spaces.
