@@ -115,3 +115,7 @@ Right now my thoughts are like this:
 A research question for my project might be: "Can the use of sentiment polarity be beneficial for a known coreference resolution model based on script knowledge?"
 
 I would like to add the sentiment treebank thing to the current system and see if it improves it. Would be an idea to define several improvements based on sentiment polarity and make a big comparison in the end. I'm still not sure but will try to compile a list of possible improvements/experiments by Thursday so I have it before the KIAI meeting.
+
+May 19
+------------------
+Had a discussion with Inoue-san about sentiment polarity and selectional preference. Will now try to explore the idea of combining sentiment treebanks from the Stanford paper with existing models in selectional preference.
