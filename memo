@@ -1,4 +1,4 @@
-[07/01/15 19:24:12] Jun Sugiura: https://docs.google.com/spreadsheets/d/1NMKiZ363-ymYqGn9BlPJWgGpSi39VlB31KG71hstHZw/edit#gid=767761360
+07/01/15 19:24:12] Jun Sugiura: https://docs.google.com/spreadsheets/d/1NMKiZ363-ymYqGn9BlPJWgGpSi39VlB31KG71hstHZw/edit#gid=767761360
 [07/01/15 19:40:25] Jun Sugiura: python src/generateTrainingSet.py --input data/dp-test.tuples --quicktest --extkb /work/jun-s/kb --problemno 13 --cat --pathsim1 --pathgroup --insent2 --simwn > tmp.xml
 python src/extractXML.py tmp.xml > tmp4viewer.xml
 ln -si tmp4viewer.xml ~/work/wsc/local/webint/link-to-result
@@ -119,3 +119,7 @@ I would like to add the sentiment treebank thing to the current system and see i
 May 19
 ------------------
 Had a discussion with Inoue-san about sentiment polarity and selectional preference. Will now try to explore the idea of combining sentiment treebanks from the Stanford paper with existing models in selectional preference.
+
+May 21
+-----------------
+Talked with Inui-san. I should come to the lab more often. Ballsballsballs.
