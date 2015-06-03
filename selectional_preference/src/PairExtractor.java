@@ -6,6 +6,7 @@ import java.io.IOException;
  * Created by martinpettersson on 02/06/15.
  */
 public class PairExtractor {
+    private String[] parsedWords;
     public static void main(String[] args) throws IOException{
         new PairExtractor("dobj");
     }
@@ -20,25 +21,27 @@ public class PairExtractor {
         String line;
         while ((line = br.readLine()) != null) {
             if (line.contains("[Text=")) {
-                //System.err.println(line);
+                parsedWords = line.split("] ");
                 continue;
             }
             if (line.contains(argument)) {
+                System.err.println(line);
                 line = line.substring(argument.length());
                 String[] stringPair = line.replaceAll("[^0-9-]", "").substring(1).split("-");
                 int[] wordIndexPair = new int[2];
 
                 try {
                     wordIndexPair[0] = Integer.parseInt(stringPair[0]); wordIndexPair[1] = Integer.parseInt(stringPair[1]);
-                    System.err.println(wordIndexPair[0] + " " + wordIndexPair[1]);
-                } catch (NumberFormatException e) {
-                    continue;
-                }
-
-
+                    try {
+                        String headWord = parsedWords[wordIndexPair[0] - 1]; String argumentWord = parsedWords[wordIndexPair[1] - 1];
+                        String[] splitHead = headWord.split(" "); headWord = splitHead[4].substring(6);
+                        String[] splitArgument = argumentWord.split(" "); argumentWord = splitArgument[4].substring(6);
+                        System.err.println("RESULT: " + headWord + " " + argumentWord);
+                    } catch (Exception e) {}
+                } catch (NumberFormatException e) { continue; }
             }
-
         }
+        // Close buffered input stream.
         br.close();
     }
 }
