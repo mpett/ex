@@ -25,10 +25,17 @@ public class PairExtractor {
             }
             if (line.contains(argument)) {
                 line = line.substring(argument.length());
-                line = line.toLowerCase();
-                line = line.replaceAll("[^A-Za-z0-9]", "").replaceAll("^[0-9]", " ").replaceAll("  ", " ");
-                System.err.println(line);
-                System.err.println("lol?");
+                String[] stringPair = line.replaceAll("[^0-9-]", "").substring(1).split("-");
+                int[] wordIndexPair = new int[2];
+
+                try {
+                    wordIndexPair[0] = Integer.parseInt(stringPair[0]); wordIndexPair[1] = Integer.parseInt(stringPair[1]);
+                    System.err.println(wordIndexPair[0] + " " + wordIndexPair[1]);
+                } catch (NumberFormatException e) {
+                    continue;
+                }
+
+
             }
 
         }
