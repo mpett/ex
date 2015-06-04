@@ -143,3 +143,11 @@ Meeting with Inoue-san. Talked about SP and what models we should use.
 June 1
 -----------------
 Attended KIAI last Friday. I should move my focus to implementing different models of Selectional Preference. Need to figure out how to do that. I also really need to get bureaucratic stuff done. Also attended a nice welcome dinner.
+
+June 4
+-----------------
+Attended research meeting. Managed to extract word pairs from the clueweb12 resource. Still wondering how to include polarity for each word pair, this needs some extra thought. One way would be to use the Wilson resource.
+
+I managed to extract around 200k wordpairs from clueweb, but the Wilson dictionary only has around 8k entries. Clearly this is not enough. One approach is to annotate the extracted pairs for which there are entries for and build a classifier using these as training data.
+
+I'm still not sure about that, it seems a bit too crude.
