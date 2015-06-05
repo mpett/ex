@@ -151,3 +151,7 @@ Attended research meeting. Managed to extract word pairs from the clueweb12 reso
 I managed to extract around 200k wordpairs from clueweb, but the Wilson dictionary only has around 8k entries. Clearly this is not enough. One approach is to annotate the extracted pairs for which there are entries for and build a classifier using these as training data.
 
 I'm still not sure about that, it seems a bit too crude.
+
+June 5
+------------------
+In Tokyo. Reading Anders Westling's thesis on sentiment analysis for twitter posts with machine learning.
