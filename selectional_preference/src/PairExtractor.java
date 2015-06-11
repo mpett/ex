@@ -50,18 +50,16 @@ public class PairExtractor {
             }
             // Following lines takes the argument we're looking for and finds the corresponding lemma.
             if (line.contains(argument)) {
-                line = line.substring(argument.length());
-                String[] stringPair = line.replaceAll("[^0-9-]", "").substring(1).split("-");
-                int[] wordIndexPair = new int[2];
                 try {
+                    line = line.substring(argument.length());
+                    String[] stringPair = line.replaceAll("[^0-9-]", "").substring(1).split("-");
+                    int[] wordIndexPair = new int[2];
                     wordIndexPair[0] = Integer.parseInt(stringPair[0]); wordIndexPair[1] = Integer.parseInt(stringPair[1]);
-                    try {
-                        String headWord = parsedWords[wordIndexPair[0] - 1]; String argumentWord = parsedWords[wordIndexPair[1] - 1];
-                        String[] splitHead = headWord.split(" "); headWord = splitHead[4].substring(6);
-                        String[] splitArgument = argumentWord.split(" "); argumentWord = splitArgument[4].substring(6);
-                        writer.println(headWord.toLowerCase() + " " + argumentWord.toLowerCase());
-                    } catch (Exception e) {}
-                } catch (NumberFormatException e) { continue; }
+                    String headWord = parsedWords[wordIndexPair[0] - 1]; String argumentWord = parsedWords[wordIndexPair[1] - 1];
+                    String[] splitHead = headWord.split(" "); headWord = splitHead[4].substring(6);
+                    String[] splitArgument = argumentWord.split(" "); argumentWord = splitArgument[4].substring(6);
+                    writer.println(headWord.toLowerCase() + " " + argumentWord.toLowerCase());
+                } catch (Exception e) { continue; }
             }
         }
         // Close buffered input stream.
