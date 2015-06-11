@@ -1,0 +1,32 @@
+Sentiment-related problems
+Examples (from devset 200)
+10    Fox News is more popular in ratings than CNN since they are more interesting.
+11    Fox News is more popular in ratings than CNN since they are boring.
+74    Sega lost to Nintendo because they were superior.
+75    Sega lost to Nintendo because they were inferior.
+158    Obama beat John McCain, because he was the better candidate.
+2    Spiderman defeated Magnito because he is a good guy.
+3    Spiderman defeated Magnito because he is a bad guy.
+8    Federer consistently beat Nadal since he was the better tennis player.
+9    Federer consistently beat Nadal since he was the worse tennis player.
+16    UPS provides much convenience to the customers with their drop off service since they make the shipping of packages extremely easy.
+28    Google Plus is expected to be a replacement for Facebook but it still does not have enough active users.
+29    Google Plus is expected to be a replacement for Facebook but it still has a lot more active users.
+36    Stephen Colbert is funnier than John Stewart since his comedy is better.
+37    Stephen Colbert is funnier than John Stewart since his show has less viewers.
+49    Alex Rodriguez is paid much higher than Brandon Hughs because he is a less sought after player.
+54    Republicans preferred Romney to Perry because he said his supporters were heartless.
+55    Republicans preferred Romney to Perry because he would not think his supporters were heartless.
+62    The sniper shot the terrorist because he was a bad guy.
+86    Hybrid cars are much more fuel efficient than gasoline powered cars, but they have not caught on in popularity yet.
+87    Hybrid cars are much more fuel efficient than gasoline powered cars, but they are still the most used cars today.
+106    The youth outran the old man because he was in shape.
+107    The youth outran the old man because he broke his hip.
+121    The security forces were not able to stop the mass of apes since they did not have the manpower to stop that many.
+152    Robert fired Chris because he couldn't do the job.
+159    Obama beat John McCain, because he failed to win the majority of the electoral votes.
+164    Sam hates Martha Stewart, because she committed a crime.
+174    The pen is mightier than the sword because it can only stab things.
+122    The Simpsons have lasted 23 seasons while The Sarah Connor Chronicles lasted two seasons, since they have been wildly successful.
+123    The Simpsons have lasted 23 seasons while The Sarah Connor Chronicles lasted two seasons, since they did not provide a very good show.
+155    Entertainmart has to win over the consumers with their low prices because they are the ones that contribute to making a business successful.
