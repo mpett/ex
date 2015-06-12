@@ -13,21 +13,7 @@ public class SentimentPreference {
      */
     public SentimentPreference() {}
 
-    /**
-     * A very naive method for calculating Selectional Preference based on the extracted word pairs.
-     * @param headWord
-     * @param argument
-     * @return
-     * @throws IOException
-     */
-    public int naiveSelectionalPreference(String headWord, String argument) throws IOException {
-        BufferedReader br = new BufferedReader(new FileReader(fileName)); String line;
-        int score = 0;
-        while ((line = br.readLine()) != null) {
-            if (line.equals(headWord + " " + argument))
-                score++;
-        }
-        br.close();
-        return score;
-    }
+
+
+
 }

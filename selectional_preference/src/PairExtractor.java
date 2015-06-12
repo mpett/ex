@@ -33,7 +33,7 @@ public class PairExtractor {
     }
 
     /**
-     * Takes as input a grammatical argument (see clueweb corpus for a list) and outputs all word pair lemmas in a file.
+     * Takes as input a grammatical argument (see clueweb corpus for a list) and outputs all word pair lemmas and their pos tags in a file.
      * @param argument
      * @throws IOException
      */
@@ -58,7 +58,9 @@ public class PairExtractor {
                     String headWord = parsedWords[wordIndexPair[0] - 1]; String argumentWord = parsedWords[wordIndexPair[1] - 1];
                     String[] splitHead = headWord.split(" "); headWord = splitHead[4].substring(6);
                     String[] splitArgument = argumentWord.split(" "); argumentWord = splitArgument[4].substring(6);
-                    writer.println(headWord.toLowerCase() + " " + argumentWord.toLowerCase());
+                    String headPartOfSpeech = splitHead[3].substring(13); String argumentPartOfSpeech = splitArgument[3].substring(13);
+                    writer.println(headWord.toLowerCase() + " " + argumentWord.toLowerCase() +
+                            " " + headPartOfSpeech.toLowerCase() + " " + argumentPartOfSpeech.toLowerCase());
                 } catch (Exception e) { continue; }
             }
         }
