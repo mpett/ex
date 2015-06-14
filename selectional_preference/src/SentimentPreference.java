@@ -3,7 +3,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 /**
- * A bunch of methods used for calculating selectional preference.
+ * TODO: methods for calculating sentiment selectional preference.
  */
 public class SentimentPreference {
     private String fileName = "extracted_pairs.txt";

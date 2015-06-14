@@ -12,6 +12,7 @@ public class Main {
 
     private static void performExtraction() throws IOException {
         PairExtractor extractor = new PairExtractor(RELATIONSHIP_TYPE);
-        extractor.extract();
+        //extractor.extract();
+        extractor.addTakamuraSentimentValues(RELATIONSHIP_TYPE);
     }
 }
