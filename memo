@@ -173,3 +173,8 @@ June 12
 I attended KIAI. Didn't understand anything. I should really, really make slides for next time.
 Today: Drink beer.
 Tomorrow: Do what I should have done yesterday.
+
+June 14
+-----------------
+Sentiment values extracted, but there are some bugs.
+Todo: Fix bugs, create counter function, do experiment on testbed sentences, make slides.
