@@ -34,7 +34,8 @@ public class PairExtractor {
     }
 
     /**
-     * Takes as input a grammatical relation (see clueweb corpus for a list) and outputs all word pair lemmas and their pos tags in a file.
+     * Takes as input a grammatical relation (see clueweb corpus for a list) and
+     * outputs all word pair lemmas and their pos tags in a file named extracted_pairs_relation.txt.
      * @param relation
      * @throws IOException
      */
@@ -69,6 +70,14 @@ public class PairExtractor {
         br.close();
     }
 
+    /**
+     * Reads file with extracted pairs according to relation, then attempts to write
+     * sentiment values for each word by finding them in the pn_en.dic lexicon.
+     * The resulting data is written to a file named sentiment_pairs_relation.txt
+     *
+     * @param relation
+     * @throws IOException
+     */
     public void addTakamuraSentimentValues(String relation) throws IOException {
         String verb = "vb vbd vbg vbn vbp vbz";
         String noun = "nn nns nnp nnps";
@@ -117,8 +126,6 @@ public class PairExtractor {
                     result = line + " " + sentiment;
                 }
             }
-
-
             if (verb.contains(splitEntry[3])) {
                 if (words.contains(splitEntry[1] + ":v")) {
                     double sentiment = sentimentValues.get(words.indexOf(splitEntry[1] + ":v"));
