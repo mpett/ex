@@ -89,9 +89,9 @@ public class PairExtractor {
             Double sentimentValue = Double.parseDouble(splitEntry[2]);
             words.add(word); sentimentValues.add(sentimentValue);
         }
-
-        String line; String result = "";
+        String line;
         while ((line = pairReader.readLine()) != null) {
+            String result = "";
             String[] splitEntry = line.split(" ");
             if (verb.contains(splitEntry[2])) {
                 if (words.contains(splitEntry[0] + ":v")) {
@@ -143,7 +143,8 @@ public class PairExtractor {
                     result = result + " " + sentiment;
                 }
             }
-            System.err.println(result);
+            if (result.split(" ").length == 6)
+                writer.println(result);
         }
     }
 }
