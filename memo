@@ -178,3 +178,8 @@ June 14
 -----------------
 Sentiment values extracted, but there are some bugs.
 Todo: Fix bugs, create counter function, do experiment on testbed sentences, make slides.
+
+Before June 17
+-----------------
+Sentiment value extraction now working properly.
+Todo: preference calculator, perform experiment, make slides for Friday's KIAI.
