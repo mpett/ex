@@ -102,6 +102,7 @@ public class PairExtractor {
         while ((line = pairReader.readLine()) != null) {
             String result = "";
             String[] splitEntry = line.split(" ");
+            if (splitEntry.length != 4) continue;
             if (verb.contains(splitEntry[2])) {
                 if (words.contains(splitEntry[0] + ":v")) {
                     double sentiment = sentimentValues.get(words.indexOf(splitEntry[0] + ":v"));
@@ -150,6 +151,7 @@ public class PairExtractor {
                     result = result + " " + sentiment;
                 }
             }
+            // Throw the result away if it contains less than six words. Looks ugly but works?
             if (result.split(" ").length == 6)
                 writer.println(result);
         }
