@@ -19,7 +19,6 @@ public class SentimentPreferencer {
 
     public SentimentPreferencer(String relationshipType) {
         this.relationshipType = relationshipType;
-
     }
 
     /**

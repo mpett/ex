@@ -1,15 +1,38 @@
 import edu.stanford.nlp.ling.Sentence;
 import edu.stanford.nlp.parser.lexparser.LexicalizedParser;
 import edu.stanford.nlp.trees.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Collection;
+import java.util.List;
 
 /**
  * Created by martinpettersson on 24/06/15.
  */
 public class ModelEvaluator {
-    private String fileName;
-    public ModelEvaluator(String fileName) {
-        System.out.println(collapsedParse("This is an easy sentence."));
+    private String inputFile;
+
+    public ModelEvaluator(String inputFile) {
+        this.inputFile = inputFile;
+    }
+
+    public void parseFromInput() throws IOException {
+        BufferedReader br = new BufferedReader(new FileReader(inputFile));
+        String line;
+        PrintWriter writer = new PrintWriter("wsc_sentiment_problems_parsed.txt", "UTF-8");
+        while ((line = br.readLine()) != null) {
+            writer.println(line);
+            Collection<TypedDependency> tdl = collapsedParse(line);
+            for (TypedDependency td : tdl) {
+                writer.println(wordLemma(td.gov().word()) + " " + wordLemma(td.dep().word()) + " " + td.reln());
+
+            }
+            writer.println("\n");
+        }
+        writer.flush(); writer.close();
+        System.err.println("File successfully parsed.");
     }
 
     private Collection<TypedDependency> collapsedParse(String sentence) {
@@ -21,7 +44,15 @@ public class ModelEvaluator {
         GrammaticalStructureFactory gsf = tlp.grammaticalStructureFactory();
         String[] sent = sentence.split(" ");
         Tree parse = lp.apply(Sentence.toWordList(sent)); GrammaticalStructure gs = gsf.newGrammaticalStructure(parse);
-        Collection<TypedDependency> tdl = gs.typedDependenciesCollapsed(); System.out.println(tdl);
+        Collection<TypedDependency> tdl = gs.typedDependenciesCollapsed();
         return tdl;
     }
+
+    private String wordLemma(String word) {
+        StanfordLemmatizer lemmatizer = new StanfordLemmatizer();
+        if (word == null)
+            return "null";
+        return lemmatizer.lemmatize(word).get(0);
+    }
+
 }
