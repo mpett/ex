@@ -31,7 +31,7 @@ public class SentimentPreferencer {
      */
     public double naiveSentimentPreference(String position, String word) throws IOException{
         // Build resources from corpus if they don't exist.
-        if (!new File("sentiment_pairs_" + relationshipType + ".txt").isFile())
+        if (!new File("sentiment_pairs/sentiment_pairs_" + relationshipType + ".txt").isFile())
             performExtraction();
         //processing the single grep result for each profile
         GrepResults sentimentPairs = grepPairs(word);
@@ -40,6 +40,7 @@ public class SentimentPreferencer {
         else System.err.println("Illegal argument");
         String[] tmp; ArrayList<String> results = new ArrayList<String>();
         double average = 0; double sentiment = 0; int numPos = 0; int numNeg = 0;
+        if (grepResults.length < 2) return 0;
         for (String result : grepResults) {
             tmp = result.split(" ");
             if (tmp[wordPosition].equals(word)) {
@@ -51,8 +52,8 @@ public class SentimentPreferencer {
                 else numNeg++;
             }
         }
-        for (String result : results)
-            System.out.println(result);
+        //for (String result : results)
+            //System.out.println(result);
         double averageSum = average;
         System.err.println("Hits: " + results.size() + " Average Sum " + averageSum + "num pos:" + numPos + " num neg: " + numNeg );
         return average/results.size();
@@ -67,7 +68,7 @@ public class SentimentPreferencer {
     private GrepResults grepPairs(String word) {
         Profile localProfile = ProfileBuilder.newBuilder()
                 .name("Sentiment pair lexicon")
-                .filePath("sentiment_pairs_" + relationshipType + ".txt")
+                .filePath("sentiment_pairs/sentiment_pairs_" + relationshipType + ".txt")
                 .onLocalhost()
                 .build();
         //Obtaining the global result

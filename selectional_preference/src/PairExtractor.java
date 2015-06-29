@@ -43,7 +43,7 @@ public class PairExtractor {
         String fileName = "clueweb12_parsed.txt";
         BufferedReader br = new BufferedReader(new FileReader(fileName));
         String line;
-        PrintWriter writer = new PrintWriter("extracted_pairs_" + argumentType + ".txt", "UTF-8");
+        PrintWriter writer = new PrintWriter("extracted_pairs/extracted_pairs_" + argumentType + ".txt", "UTF-8");
         while ((line = br.readLine()) != null) {
             // Saves parsed string in array and continues.
             if (line.contains("[Text=")) {
@@ -51,7 +51,7 @@ public class PairExtractor {
                 continue;
             }
             // Following lines takes the relation we're looking for and finds the corresponding lemma.
-            if (line.contains(relation)) {
+            if (line.contains(relation + "(")) {
                 try {
                     line = line.substring(relation.length());
                     String[] stringPair = line.replaceAll("[^0-9-]", "").substring(1).split("-");
@@ -88,8 +88,8 @@ public class PairExtractor {
         ArrayList<Double> sentimentValues = new ArrayList<Double>();
         String lexiconName = "pn_en.dic.txt";
         Scanner lexiconScanner = new Scanner(new FileReader(lexiconName));
-        BufferedReader pairReader = new BufferedReader(new FileReader("extracted_pairs_" + relation + ".txt"));
-        PrintWriter writer = new PrintWriter("sentiment_pairs_" + relation + ".txt", "UTF-8");
+        BufferedReader pairReader = new BufferedReader(new FileReader("extracted_pairs/extracted_pairs_" + relation + ".txt"));
+        PrintWriter writer = new PrintWriter("sentiment_pairs/sentiment_pairs_" + relation + ".txt", "UTF-8");
         // Handle input from the sentiment lexicon.
         while (lexiconScanner.hasNextLine()) {
             String lexiconEntry = lexiconScanner.nextLine();

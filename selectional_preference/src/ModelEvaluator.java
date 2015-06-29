@@ -26,9 +26,17 @@ public class ModelEvaluator {
             writer.println(line);
             Collection<TypedDependency> tdl = collapsedParse(line);
             for (TypedDependency td : tdl) {
-                writer.println(wordLemma(td.gov().word()) + " " + wordLemma(td.dep().word()) + " " + td.reln());
-
+                if (td.reln().toString().equals("root"))
+                    continue;
+                SentimentPreferencer sp = new SentimentPreferencer(td.reln().toString());
+                String governor = wordLemma(td.gov().word()).toLowerCase();
+                System.err.println("GOV: " + governor);
+                sp.naiveSentimentPreference("head", governor);
+                String dependant = wordLemma(td.dep().word()).toLowerCase();
+                System.err.println("DEP: " + dependant);
+                sp.naiveSentimentPreference("argument", dependant);
             }
+
             writer.println("\n");
         }
         writer.flush(); writer.close();
