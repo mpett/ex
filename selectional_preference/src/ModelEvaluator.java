@@ -13,7 +13,7 @@ import java.util.List;
  */
 public class ModelEvaluator {
     private String inputFile;
-
+    private String acceptedDependencies = "dobj nsubj iobj";
     public ModelEvaluator(String inputFile) {
         this.inputFile = inputFile;
     }
@@ -26,17 +26,15 @@ public class ModelEvaluator {
             writer.println(line);
             Collection<TypedDependency> tdl = collapsedParse(line);
             for (TypedDependency td : tdl) {
-                if (td.reln().toString().equals("root"))
-                    continue;
-                SentimentPreferencer sp = new SentimentPreferencer(td.reln().toString());
-                String governor = wordLemma(td.gov().word()).toLowerCase();
-                System.err.println("GOV: " + governor);
-                sp.naiveSentimentPreference("head", governor);
-                String dependant = wordLemma(td.dep().word()).toLowerCase();
-                System.err.println("DEP: " + dependant);
-                sp.naiveSentimentPreference("argument", dependant);
+                if (acceptedDependencies.contains(td.reln().toString()) || td.reln().toString().contains("prep")) {
+                    SentimentPreferencer sp = new SentimentPreferencer(td.reln().toString());
+                    String governor = wordLemma(td.gov().word()).toLowerCase();
+                    double govSentiment = sp.naiveSentimentPreference("head", governor);
+                    String dependant = wordLemma(td.dep().word()).toLowerCase();
+                    double depSentiment = sp.naiveSentimentPreference("argument", dependant);
+                    writer.println(td.reln().toString() + " " + governor + " " + dependant + " " + govSentiment + " " + depSentiment);
+                }
             }
-
             writer.println("\n");
         }
         writer.flush(); writer.close();
@@ -62,5 +60,4 @@ public class ModelEvaluator {
             return "null";
         return lemmatizer.lemmatize(word).get(0);
     }
-
 }

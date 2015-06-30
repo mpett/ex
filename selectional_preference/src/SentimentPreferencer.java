@@ -55,8 +55,8 @@ public class SentimentPreferencer {
         //for (String result : results)
             //System.out.println(result);
         double averageSum = average;
-        System.err.println("Hits: " + results.size() + " Average Sum " + averageSum + "num pos:" + numPos + " num neg: " + numNeg );
-        return average/results.size();
+
+        return numPos - numNeg;
     }
 
     /**
