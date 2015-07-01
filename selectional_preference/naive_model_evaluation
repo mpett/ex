@@ -1,0 +1,210 @@
+[Fox News]+ is more popular in ratings than [CNN] since [they]+ are more interesting
+nsubj popular news 8.0 25.0
+prep_in popular rating -2.0 0.0
+prep_than rating cnn 0.0 0.0
+nsubj interesting they 20.0 0.0
+
+
+[Fox News] is more popular in ratings than [CNN]- since [they]- are boring
+nsubj popular news 8.0 25.0
+prep_in popular rating -2.0 0.0
+prep_than rating cnn 0.0 0.0
+nsubj boring they 5.0 0.0
+
+
+[Sega] lost to [Nintendo]+ because they were [superior]+
+nsubj lose sega 79.0 0.0
+prep_to lose nintendo -14.0 0.0
+nsubj superior they 3.0 0.0
+
+
+[Sega]- lost to [Nintendo] because [they]- were inferior
+nsubj lose sega 79.0 0.0
+prep_to lose nintendo -14.0 0.0
+nsubj inferior they 2.0 0.0
+
+
+[Obama]+ beat John McCain, because [he]+ was the better candidate
+nsubj beat obama 10.0 0.0
+dobj beat mccain -8.0 0.0
+nsubj candidate he 4.0 -1.0
+
+
+[Spiderman]+ defeated Magnito because [he]+ is a good guy
+nsubj defeat spiderman 7.0 0.0
+dobj defeat magnito -2.0 0.0
+nsubj guy he 4.0 -1.0
+
+
+Spiderman defeated [Magnito]- because [he]- is a bad guy
+nsubj defeat spiderman 7.0 0.0
+dobj defeat magnito -2.0 0.0
+nsubj guy he 4.0 -1.0
+
+
+[Federer]+ consistently beat Nadal since [he]+ was the better tennis player
+nsubj beat federer 10.0 0.0
+dobj beat nadal -8.0 0.0
+nsubj player he 7.0 -1.0
+
+
+Federer consistently beat [Nadal]- since [he]- was the worse tennis player
+nsubj beat federer 10.0 0.0
+dobj beat nadal -8.0 0.0
+nsubj player he 7.0 -1.0
+
+
+[UPS]+ provides much convenience to the customers with their drop off service since [they]+ make the shipping of packages extremely easy
+nsubj provide ups 198.0 0.0
+dobj provide convenience 677.0 6.0
+prep_to provide customer 104.0 55.0
+prep_with customer drop 3.0 0.0
+prep_off drop service 0.0 0.0
+nsubj make they 1.0 0.0
+dobj make shipping 0.0 10.0
+prep_of shipping package 0.0 -6.0
+
+
+[Google Plus]- is expected to be a replacement for Facebook but [it]- still does not have enough active users
+prep_for replacement facebook 4.0 0.0
+nsubj have it 0.0 0.0
+dobj have user 0.0 74.0
+
+
+Google Plus is expected to be a replacement for [Facebook]+ but [it]+ still has a lot more active users
+prep_for replacement facebook 4.0 0.0
+nsubj have it 0.0 0.0
+dobj have user 0.0 74.0
+
+
+[Stephen Colbert]+ is funnier than John Stewart since [his]+ comedy is better
+nsubj funnier colbert 0.0 0.0
+prep_than funnier stewart 0.0 0.0
+nsubj better comedy -2.0 -1.0
+
+
+Stephen Colbert is funnier than [John Stewart]- since [his]- show has less viewers
+nsubj funnier colbert 0.0 0.0
+prep_than funnier stewart 0.0 0.0
+nsubj have show 0.0 42.0
+dobj have viewer 0.0 10.0
+
+
+Alex Rodriguez is paid much higher than [Brandon Hughs]- because [he]- is a less sought after player
+prep_than pay hughs 2.0 0.0
+prep_after seek player 2.0 0.0
+
+
+Republicans preferred Romney to [Perry]- because [he]- said his supporters were heartless
+nsubj prefer republican 33.0 0.0
+dobj prefer romney 21.0 0.0
+prep_to prefer perry 3.0 0.0
+nsubj say he 834.0 -1.0
+nsubj heartless supporter 1.0 3.0
+
+
+Republicans preferred [Romney]+ to Perry because [he]+ would not think his supporters were heartless
+nsubj heartless republican 1.0 0.0
+prep_to prefer perry 3.0 0.0
+nsubj think he 199.0 -1.0
+dobj think supporter 83.0 -1.0
+
+
+The sniper shot the [terrorist]- because [he]- was a bad guy
+nsubj shot sniper 0.0 -2.0
+dobj shot terrorist 0.0 -4.0
+nsubj guy he 4.0 -1.0
+
+
+[Hybrid cars]- are much more fuel efficient than gasoline powered cars, but [they]- have not caught on in popularity yet
+nsubj efficient car 3.0 -20.0
+prep_than efficient gasoline -3.0 0.0
+nsubj catch they 4.0 0.0
+prep_in catch popularity 2.0 7.0
+
+
+Hybrid cars are much more fuel efficient than [gasoline powered cars]-, but [they]- are still the most used cars today
+nsubj efficient car 3.0 -20.0
+prep_than efficient gasoline -3.0 0.0
+nsubj car they -2.0 0.0
+
+
+[The youth]+ outran the old man because [he]+ was in shape
+nsubj outran youth 0.0 -1.0
+dobj outran man 0.0 8.0
+nsubj be he 0.0 -1.0
+prep_in be shape 0.0 -25.0
+
+
+The youth outran [the old man]- because [he]- broke his hip
+nsubj outran youth 0.0 -1.0
+dobj outran man 0.0 8.0
+nsubj break he -6.0 -1.0
+dobj break hip -3.0 3.0
+
+
+[The security forces]- were not able to stop the mass of apes since [they]- did not have the manpower to stop that many
+nsubj able force 130.0 -9.0
+dobj stop mass -51.0 4.0
+prep_of mass ape 6.0 -1.0
+nsubj have they 0.0 0.0
+dobj have manpower 0.0 0.0
+dobj stop many -51.0 2.0
+
+
+Robert fired [Chris]- because [he]- couldn't do the job
+nsubj fire robert -3.0 0.0
+dobj fire chris 2.0 0.0
+nsubj could he 0.0 -1.0
+dobj do job 0.0 -65.0
+
+
+Obama beat [John McCain]-, because [he]- failed to win the majority of the electoral votes
+nsubj beat obama 10.0 0.0
+dobj beat mccain -8.0 0.0
+nsubj fail he 31.0 -1.0
+dobj win majority 256.0 3.0
+prep_of majority vote 78.0 11.0
+
+
+Sam hates [Martha Stewart]-, because [she]- committed a crime
+nsubj hate sam 22.0 0.0
+dobj hate stewart -5.0 0.0
+nsubj commit she 18.0 0.0
+dobj commit crime -39.0 -29.0
+
+
+The pen is mightier than [the sword]- because [it]- can only stab things
+nsubj mightier pen 0.0 1.0
+prep_than mightier sword 0.0 0.0
+nsubj stab it -1.0 0.0
+dobj stab thing 1.0 0.0
+
+
+[The Simpsons]+ have lasted 23 seasons while The Sarah Connor Chronicles lasted two seasons, since [they]+ have been wildly successful
+nsubj last simpsons 15.0 0.0
+dobj last season 17.0 5.0
+nsubj last chronicle 15.0 0.0
+dobj last season 17.0 5.0
+nsubj successful they 20.0 0.0
+
+
+The Simpsons have lasted 23 seasons while [The Sarah Connor Chronicles]- lasted two seasons, since [they]- did not provide a very good show
+nsubj last simpsons 15.0 0.0
+dobj last season 17.0 5.0
+nsubj last chronicle 15.0 0.0
+dobj last season 17.0 5.0
+nsubj provide they 198.0 0.0
+dobj provide show 677.0 41.0
+
+
+Entertainmart has to win over [the consumers]+ with their low prices because [they]+ are the ones that contribute to making a business successful
+nsubj have entertainmart 0.0 0.0
+dobj win consumer 256.0 18.0
+prep_with consumer price 4.0 -28.0
+nsubj one they 17.0 0.0
+nsubj contribute that 12.0 0.0
+prepc_to contribute make 0.0 0.0
+nsubj successful business 20.0 26.0
+
+
