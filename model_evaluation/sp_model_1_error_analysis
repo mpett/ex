@@ -1,0 +1,15 @@
+NON RESOLVABLE ISSUES:
+123, 122: The sentiment issue here lies in the number of seasons a TV-series has been on the air. From world knowledge we can figure out that more seasons means we have a better series. 
+they provide a good show (positive) --> 23 > 2 --> simpsons have property 23 --> the simpsons
+We cannot figure this out using selectional preference alone.
+
+174: mightier is not lemmatized into mighty.
+
+107, 106: outran is not lemmatized into outrun.
+
+62: shot is not lemmatized into shoot.
+
+55: dependency (dobj,prefer,romney) is missing. Is this a simple bug or is the sentence not parsed correctly?
+
+36, 37: funnier not lemmatized into funny 
+
