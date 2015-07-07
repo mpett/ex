@@ -192,3 +192,12 @@ Todo: Model evaluation.
 June 30
 -----------------
 Finished model evaluation on naive sp. Seems pretty worthless?
+
+July 7
+----------------
+sp_model_1 evaluation:
+correct: 15
+incorrect: 6
+non-resolvable: 7
+uses takamura lexicon, clueweb12 corpus.
+compares sp-values (counted as numPos-numNeg) with manual annotation of pronouns.
