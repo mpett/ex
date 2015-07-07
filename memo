@@ -201,3 +201,4 @@ incorrect: 6
 non-resolvable: 7
 uses takamura lexicon, clueweb12 corpus.
 compares sp-values (counted as numPos-numNeg) with manual annotation of pronouns.
+todo: try to solve the non-resolvable bugs
