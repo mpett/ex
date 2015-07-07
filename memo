@@ -202,3 +202,12 @@ non-resolvable: 7
 uses takamura lexicon, clueweb12 corpus.
 compares sp-values (counted as numPos-numNeg) with manual annotation of pronouns.
 todo: try to solve the non-resolvable bugs
+
+July 8
+------------------
+Did some error analysis on sp_model_1.
+todo: solve the bug on lemmatization, do error analysis on incorrect sentences
+questions to ask:
+heuristic on how to identify sentiment of pronoun, best approach?
+how to automatically identify antecedent candidates?
+how to integrate the model with the pronoun resolution system?
