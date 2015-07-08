@@ -203,11 +203,16 @@ uses takamura lexicon, clueweb12 corpus.
 compares sp-values (counted as numPos-numNeg) with manual annotation of pronouns.
 todo: try to solve the non-resolvable bugs
 
-July 8
+July 7
 ------------------
 Did some error analysis on sp_model_1.
 todo: solve the bug on lemmatization, do error analysis on incorrect sentences
 questions to ask:
-heuristic on how to identify sentiment of pronoun, best approach?
+heuristic on how to identify sentiment of pronoun, what is the best approach?
 how to automatically identify antecedent candidates?
 how to integrate the model with the pronoun resolution system?
+
+July 8
+----------------
+Did error analysis on incorrect sentences for sp_model_1.
+todo: resolve the lemmatization issue.
