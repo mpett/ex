@@ -216,3 +216,9 @@ July 8
 ----------------
 Did error analysis on incorrect sentences for sp_model_1.
 todo: resolve the lemmatization issue.
+
+July 21
+----------------
+Project refactoring.
+Todo: new branches for each new model. Make model evaluations and compare. Resolve lemmatiztion issue?
+I should make a separate memo for the evaluated models (what they contained, etc)
