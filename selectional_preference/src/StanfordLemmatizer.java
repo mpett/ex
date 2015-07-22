@@ -20,7 +20,7 @@ public class StanfordLemmatizer {
 
         // StanfordCoreNLP loads a lot of models, so you probably
         // only want to do this once per execution
-        this.pipeline = new StanfordCoreNLP(props);
+            this.pipeline = new StanfordCoreNLP(props);
     }
 
     public List<String> lemmatize(String documentText)

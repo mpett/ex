@@ -1,9 +1,18 @@
+import org.grep4j.core.model.Profile;
+import org.grep4j.core.model.ProfileBuilder;
+import org.grep4j.core.result.GrepResult;
+import org.grep4j.core.result.GrepResults;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import static org.grep4j.core.Grep4j.constantExpression;
+import static org.grep4j.core.Grep4j.grep;
+import static org.grep4j.core.fluent.Dictionary.on;
 
 /**
  * Extracts word pairs from the ClueWeb12 corpus for selectional preference.
@@ -156,4 +165,30 @@ public class PairExtractor {
                 writer.println(result);
         }
     }
+
+    public void addSentiWordnetValues(String dependency) throws IOException {
+        BufferedReader pairReader = new BufferedReader(new FileReader("extracted_pairs/extracted_pairs_" + dependency + ".txt"));
+        PrintWriter writer = new PrintWriter("sentiment_pairs_swn/sentiment_pairs_" + dependency + ".txt", "UTF-8");
+        String line; String result = "";
+        while ((line = pairReader.readLine()) != null) {
+            String[] splitEntry = line.split(" ");
+            GrepResults govs = grepPairs(splitEntry[0]);
+            GrepResults deps = grepPairs(splitEntry[1]);
+            for (GrepResult r : govs)
+                System.err.println("WORD: " + line + " RESULT: " + r.toString());
+        }
+    }
+
+    private GrepResults grepPairs(String word) {
+        Profile localProfile = ProfileBuilder.newBuilder()
+                .name("SentiWordNet")
+                .filePath("sentiment_lexicons/Ratings_Warner_et_al.csv")
+                .onLocalhost()
+                .build();
+        //Obtaining the global result
+        GrepResults results = grep(constantExpression(word), on(localProfile));
+        return results;
+    }
+
+
 }

@@ -11,9 +11,21 @@ public class Main {
     private static Kattio io = new Kattio(System.in);
 
     public static void main(String[] args) throws IOException {
+        test();
         //sentimentPreference();
-        evaluateModel();
+        //evaluateModel();
+        //resolvePronouns("devset.txt");
         io.close();
+    }
+
+    private static void test() throws IOException {
+        PairExtractor p = new PairExtractor("dobj");
+        p.addSentiWordnetValues("dobj");
+    }
+
+    private static void resolvePronouns(String document) {
+        PronounResolver p = new PronounResolver();
+        p.getStanfordCoref(document);
     }
 
     private static void evaluateModel() throws IOException {

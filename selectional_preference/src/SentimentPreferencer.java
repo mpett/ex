@@ -52,8 +52,8 @@ public class SentimentPreferencer {
                 else numNeg++;
             }
         }
-        //for (String result : results)
-            //System.out.println(result);
+        for (String result : results)
+            System.out.println(result);
         double averageSum = average;
 
         return numPos - numNeg;
