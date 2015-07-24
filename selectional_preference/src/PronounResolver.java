@@ -57,7 +57,6 @@ public class PronounResolver {
         // Both sentence and token offsets start at 1!
         Map<Integer, edu.stanford.nlp.dcoref.CorefChain> graph =
                 document.get(CorefCoreAnnotations.CorefChainAnnotation.class);
-        
-    }
 
+    }
 }

@@ -166,23 +166,41 @@ public class PairExtractor {
         }
     }
 
-    public void addSentiWordnetValues(String dependency) throws IOException {
+    public void addWarrinerValenceValues(String dependency) throws IOException {
         BufferedReader pairReader = new BufferedReader(new FileReader("extracted_pairs/extracted_pairs_" + dependency + ".txt"));
-        PrintWriter writer = new PrintWriter("sentiment_pairs_swn/sentiment_pairs_" + dependency + ".txt", "UTF-8");
-        String line; String result = "";
-        while ((line = pairReader.readLine()) != null) {
-            String[] splitEntry = line.split(" ");
-            GrepResults govs = grepPairs(splitEntry[0]);
-            GrepResults deps = grepPairs(splitEntry[1]);
-            for (GrepResult r : govs)
-                System.err.println("WORD: " + line + " RESULT: " + r.toString());
+        PrintWriter writer = new PrintWriter("sentiment_pairs_warriner_valence/sentiment_pairs_warriner_valence_" + dependency + ".txt", "UTF-8");
+        String line;
+        System.err.println("running");
+        ArrayList<String> words = new ArrayList<String>();
+        ArrayList<Double> sentimentValues = new ArrayList<Double>();
+        String lexiconName = "sentiment_lexicons/Ratings_Warriner_et_al.csv";
+        double depValue = 0; double govValue = 0;
+        Scanner lexiconScanner = new Scanner(new FileReader(lexiconName));
+        while (lexiconScanner.hasNextLine()) {
+            String lexiconEntry = lexiconScanner.nextLine();
+            String[] splitEntry = lexiconEntry.split(",");
+            String word = splitEntry[1];
+            Double sentimentValue = Double.parseDouble(splitEntry[2]);
+            words.add(word); sentimentValues.add(sentimentValue);
         }
+        while ((line = pairReader.readLine()) != null) {
+            String result = line;
+            String[] splitEntry = line.split(" ");
+
+            if (words.contains(splitEntry[0]) && words.contains(splitEntry[1])) {
+                depValue = sentimentValues.get(words.indexOf(splitEntry[0]));
+                govValue = sentimentValues.get(words.indexOf(splitEntry[1]));
+            } else continue;
+            System.err.println(line + " " + depValue + " " + govValue);
+
+        }
+
     }
 
     private GrepResults grepPairs(String word) {
         Profile localProfile = ProfileBuilder.newBuilder()
                 .name("SentiWordNet")
-                .filePath("sentiment_lexicons/Ratings_Warner_et_al.csv")
+                .filePath("sentiment_lexicons/Ratings_Warriner_et_al.csv")
                 .onLocalhost()
                 .build();
         //Obtaining the global result

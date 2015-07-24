@@ -2,7 +2,6 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.List;
 
 /**
  * Created by martinpettersson on 24/06/15.
@@ -20,7 +19,7 @@ public class Main {
 
     private static void test() throws IOException {
         PairExtractor p = new PairExtractor("dobj");
-        p.addSentiWordnetValues("dobj");
+        p.addWarrinerValenceValues("dobj");
     }
 
     private static void resolvePronouns(String document) {
