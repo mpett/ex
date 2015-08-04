@@ -1,0 +1,47 @@
+15-20 minutes + 10 min question time
+~1 slide per minute
+
+Important ideas:
+Relationship between the sentiment value of grammatical dependencies in a sentence.
+Resolving difficult pronouns using sentiment-level selectional preference.
+
+Outline:
+
+Personal Presentation/Personal Background (2 slides)
+
+INTRODUCTION
+A statement of the problem being solved (1 slide)
+* WSC, definition of the challenge. About the sentences with sentiment issues.
+Intuition and motivation (1 slide)
+* Mention error analysis of Sugiura-san's system and how I decided to work on this model.
+* Same slide as in KIAI (Show a WSC problem at show some connection), make it more clear.
+A high-level view of the solution (1 slide)
+* Make, picture, don't just use steps/text (see whiteboard)
+
+DETAILS OF SOLUTION
+Pair extraction from clueweb corpus (1 slide)
+Extraction of sentiment values from Takamura sentiment lexicon (1 slide)
+The simple resolution algorithm (1 slide)
+
+RESULTS DEMONSTRATING SOLUTION
+1 slide, extracted pairs from clueweb
+table for each dependency
+1 slide, extracted sentiment pairs
+table for each dependency
+1 slide, results from the devset200 set with the manual annotations (recall/precision, how to calculate?)
+A couple of slides:
+showing error analysis of some sentence pairs highlight
+show all the tuples from the nintendo example and in detail reason why the system chose incorrectly.
+
+Critiques of the work
+* No related work to compare with?
+* Mention selectional preference work
+* There are many papers out there on sentiment analysis and pronoun resolution, but none of these mention sentiment-level selectional preferences.
+* Still unfinished work. The model is very simple, only one lexicon used, use a larger corpus (only used subset of clueweb). I did not implement a heuristic for determining the sentiment value of the pronoun (only used manual annotation so far)
+
+
+1 slide, future plans
+* want to finish the sentiment-level sp approach with warriner, sentiwordnet + implement one/several heuristics for the pronoun, make everything automatic
+* want a ml/classifier based approach and compare the models
+
+
